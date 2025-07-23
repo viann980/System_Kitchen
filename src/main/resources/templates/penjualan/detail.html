@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Penjualan</title>
+</head>
+<body style="margin: 0; font-family: Arial, sans-serif; background: linear-gradient(135deg, rgb(45, 88, 170) 0%, rgb(0, 64, 128) 50%, rgb(128, 0, 64) 100%); color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;">
+    <header>
+        <h3 style="font-size: 2rem; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); margin-bottom: 20px;">Detail Penjualan</h3>
+    </header>
+    <main style="background: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 10px; width: 80%; max-width: 600px;">
+        <div class="penjualan-header" style="margin-bottom: 20px;">
+            <p><strong>ID Penjualan:</strong> <span th:text="${penjualan.id}"></span></p>
+            <p><strong>Tanggal:</strong> <span th:text="${penjualan.tanggal}"></span></p>
+            <p><strong>Pelanggan:</strong> <span th:text="${penjualan.pelanggan}"></span></p>
+            <p><strong>Total:</strong> Rp <span th:text="${penjualan.total}"></span></p>
+        </div>
+
+        <div class="penjualan-details">
+            <h2 style="margin-bottom: 10px;">Detail Barang</h2>
+            <table style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr>
+                        <th style="border-bottom: 2px solid white; padding: 10px;">Nama Barang</th>
+                        <th style="border-bottom: 2px solid white; padding: 10px;">Jumlah</th>
+                        <th style="border-bottom: 2px solid white; padding: 10px;">Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="detail : ${details}">
+                        <td th:text="${detail.barang.nama}" style="padding: 10px; border-bottom: 1px solid white;"></td>
+                        <td th:text="${detail.jumlah}" style="padding: 10px; border-bottom: 1px solid white;"></td>
+                        <td th:text="${detail.subtotal}" style="padding: 10px; border-bottom: 1px solid white;"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer style="margin-top: 20px;">
+        <p>&copy; 2025 Data Inventory Kitchen - Kelompok Satu - Universitas Insan Pembangunan Indonesia</p>
+    </footer>
+</body>
+</html>

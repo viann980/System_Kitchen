@@ -1,0 +1,59 @@
+CREATE DATABASE salesdb;
+USE salesdb;
+   
+CREATE TABLE user (
+    user_id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    password CHAR(40) NOT NULL -- SHA-1 menghasilkan 40 karakter hex
+);
+
+CREATE TABLE barang (
+    kode VARCHAR(20) PRIMARY KEY,
+    nama VARCHAR(100) NOT NULL,
+    harga DOUBLE NOT NULL,
+    stok INT NOT NULL
+);
+
+CREATE TABLE penjualan (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    tanggal DATE NOT NULL,
+    pelanggan VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE penjualan_detail (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    penjualan_id BIGINT NOT NULL,
+    barang_kode VARCHAR(20) NOT NULL,
+    jumlah INT NOT NULL,
+    subtotal DOUBLE NOT NULL,
+    FOREIGN KEY (penjualan_id) REFERENCES penjualan(id) ON DELETE CASCADE,
+    FOREIGN KEY (barang_kode) REFERENCES barang(kode) ON DELETE CASCADE
+);
+
+INSERT INTO user (username, email, password)
+VALUES 
+('admin', 'admin@example.com', SHA1('admin123')),
+('user1', 'user1@example.com', SHA1('user123'));
+
+INSERT INTO barang (kode, nama, harga, stok)
+VALUES
+('B001', 'Buku Tulis', 5000, 100),
+('B002', 'Pulpen', 3000, 150),
+('B003', 'Penggaris', 2000, 80),
+('B004', 'Buku Gambar', 10000, 100);
+
+INSERT INTO penjualan (tanggal, pelanggan)
+VALUES
+('2024-11-25', 'Budiman'),
+('2024-11-26', 'Siti'),
+('2024-11-26', 'Andy');
+
+INSERT INTO penjualan_detail (penjualan_id, barang_kode, jumlah, subtotal)
+VALUES
+(1, 'B001', 2, 10000),
+(1, 'B003', 1, 2000),
+(2, 'B002', 3, 6000),
+(2, 'B004', 2, 20000),
+(3, 'B001', 4, 20000),
+(3, 'B003', 2, 4000);

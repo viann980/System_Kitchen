@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Barang</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+    <h1>Daftar Barang</h1>
+</header>
+<main>
+    <br />
+    <table>
+        <thead>
+            <tr>
+                <th>Kode</th>
+                <th>Nama</th>
+                <th>Harga</th>
+                <th>Stok</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="barang : ${barangList}">
+                <td th:text="${barang.kode}"></td>
+                <td th:text="${barang.nama}"></td>
+                <td th:text="${barang.harga}"></td>
+                <td th:text="${barang.stok}"></td>
+                <td>
+                    <a th:href="@{'/barang/form?kode=' + ${barang.kode}}" class="btn btn-warning">Edit</a>
+                    <a th:href="@{'/barang/delete/' + ${barang.kode}}" class="btn btn-danger" style="color: rgb(255, 128, 0); text-decoration: none;"
+                       onclick="return confirm('Apakah Anda yakin ingin menghapus barang ini?')">Hapus</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+	<br />
+	<p align="center"><a href="/barang/form" class="btn btn-primary">Tambah Barang</a></p>
+</main>
+<footer>
+    <p>&copy; 2025 Data Inventory Kitchen - Kelompok Satu - Universitas Insan Pembangunan Indonesia</p>
+</footer>
+</body>
+</html>

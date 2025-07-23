@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Penjualan</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+    <h1>Daftar Penjualan</h1>
+</header>
+<main>
+    <br />
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tanggal</th>
+                <th>Pelanggan</th>
+                <th>Total</th> <!-- Kolom Total -->
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="penjualan : ${penjualan}">
+                <td th:text="${penjualan.id}"></td>
+                <td th:text="${penjualan.tanggal}"></td>
+                <td th:text="${penjualan.pelanggan}"></td>
+                <td th:text="${penjualan.total}"></td> <!-- Data Total -->
+                <td>
+					<a th:href="@{'/penjualan/detail/' + ${penjualan.id}}" class="btn btn-info" style="color: rgb(0, 255, 255); text-decoration: none;">Detail</a>
+                    <a th:href="@{'/penjualan/delete/' + ${penjualan.id}}" class="btn btn-danger" style="color: rgb(255, 128, 0); text-decoration: none;"
+                       onclick="return confirm('Apakah Anda yakin ingin menghapus penjualan ini?')">Hapus</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+	<br />
+	<p align="center"><a href="/penjualan/form" class="btn btn-primary">Tambah Penjualan</a></p>
+</main>
+<footer>
+    <p>&copy; 2025 Data Inventory Kitchen - Kelompok Satu - Universitas Insan Pembangunan Indonesia</p>
+</footer>
+</body>
+</html>

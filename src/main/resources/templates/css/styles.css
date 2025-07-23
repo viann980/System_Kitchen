@@ -1,0 +1,121 @@
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 24px;
+}
+
+/* Footer */
+footer {
+    background-color: #f1f1f1;
+    color: #2e7d32;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Kontainer */
+.container {
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Teks */
+h2 {
+    color: #2e7d32;
+}
+
+/* Tombol */
+button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1b5e20;
+}
+
+/* Styling untuk paragraf deskripsi */
+.container p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+    margin: 15px 0;
+}
+
+/* Styling untuk tabel hasil pencarian */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+table thead {
+    background-color: #2e7d32;
+    color: white;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tbody tr:hover {
+    background-color: #d4edda;
+}
+
+/* Tombol pencarian */
+button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #1b5e20;
+}
+
+/* Input pencarian */
+input[type="text"] {
+    padding: 10px;
+    width: calc(100% - 130px); /* Lebar input menyesuaikan */
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+input[type="password"] {
+    padding: 10px;
+    width: calc(100% - 130px); /* Lebar input menyesuaikan */
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}

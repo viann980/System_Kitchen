@@ -1,0 +1,247 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background:linear-gradient(200deg, rgb(45, 88, 170) 0%, rgb(0, 64, 128) 50%, rgb(0, 0, 64) 100%); color: white; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.navbar {
+    background: linear-gradient(135deg, #0056b3, #ff4b5c); /* Gradasi untuk header */
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    margin: 13;
+    text-align: center;
+    font-size: 2.5rem; /* Ukuran font lebih besar untuk tampilan yang lebih mencolok */
+	color: rgb(255, 255, 255);
+	text-shadow: 0 1px 15px rgb(0, 128, 255);
+}
+
+/* Footer */
+footer {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Section */
+section {
+    padding: 40px 0;
+}
+
+/* Description Box */
+.description-box {
+    background: linear-gradient(135deg, rgb(0, 64, 128), rgb(91, 0, 46)); /* Gradasi elegan */
+    border-radius: 20px;
+	font-size: 18px;
+    padding: 70px;
+	color: aliceblue;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.description-box:hover{
+	   transition: all 0.10s ease;
+	   box-shadow: 0 3px 20px #ff00f7;
+	   /*Bluehovershadow*/-webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+	   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+	   -o-transition: all 0.10s ease;
+	   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+	   -webkit-transition: all 0.10s ease;
+	   -moz-transition: all 0.10s ease;
+	   -ms-transition: all 0.10s ease;
+}
+
+/* Button Styles */
+.btn {
+    padding: 10px 15px; /* Ukuran tombol lebih besar untuk interaksi yang lebih baik */
+    font-size: 16px; /* Ukuran font lebih besar untuk tombol */
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transisi halus */
+}
+
+.btn-primary {
+    background-color: #0056b3; /* Warna tombol utama */
+    color: white;
+}
+
+.btn-warning {
+    background-color: #ffc107; /* Warna tombol peringatan */
+    color: black;
+}
+
+.btn:hover {
+    opacity: 0.9; /* Efek hover */
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+/* Table Styles */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Menghilangkan jarak antar border tabel */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+table th,
+table td {
+    border: none; /* Menghilangkan border default untuk tabel */
+    padding: 12px; /* Padding lebih besar untuk sel tabel */
+}
+
+table th {
+   background-color: rgba(255,255,255,0.2); /* Warna latar belakang header tabel transparan */
+   color: white; 
+   animation: fadeIn .5s ease-in-out; /* Animasi masuk untuk header tabel */
+}
+
+table td {
+   background-color: rgba(255,255,255,0.1); /* Warna latar belakang sel tabel transparan */
+   color: white; 
+}
+
+/* Dashboard Styles */
+.dashboard {
+   display: flex; 
+   justify-content: center; 
+   margin-top: 20px; 
+}
+
+.grid {
+   display: grid; 
+   gap: 20px; 
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+}
+
+/* Menu Card */
+.menu-card {
+   background-color: rgb(255, 255, 255); /* Latar belakang transparan untuk kartu menu */
+   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+   border-radius: 10px; 
+   padding: 20px; 
+   text-align:center; 
+   transition : transform .2s ease , box-shadow .2s ease ; 
+}
+
+/* Menu Card */
+.menu-card {
+    background-color: rgba(255, 255, 255, 0.8); /* Latar belakang transparan untuk kartu menu */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px; 
+    padding: 10px; 
+    text-align: center; 
+    transition: transform .2s ease, box-shadow .2s ease; 
+    position: relative; /* Tambahkan posisi relatif untuk efek border */
+    overflow: hidden; /* Sembunyikan elemen yang melampaui batas */
+}
+
+.menu-card:hover {
+    transform: translateY(-5px) rotateY(5deg); /* Efek rotasi saat hover untuk kesan interaktif */
+    
+    /* Bayangan luar */
+    box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.3), 
+        0 5px 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Border animasi */
+.menu-card::before {
+    content: '';
+    position: absolute;
+    top: -2px; /* Posisi border sedikit di atas */
+    left: -2px; /* Posisi border sedikit di kiri */
+    right: -2px; /* Posisi border sedikit di kanan */
+    bottom: -2px; /* Posisi border sedikit di bawah */
+    border-radius: 12px; /* Sesuaikan dengan border-radius menu-card */
+    border: 2px solid transparent; /* Border transparan sebagai dasar */
+    transition: all 0.3s ease; /* Transisi halus untuk perubahan warna border dan ukuran */
+}
+
+.menu-card:hover::before {
+    border-color: rgb(0, 128, 255); /* Warna border saat hover */
+    transform: scale(1.05); /* Membesarkan border saat hover untuk efek timbul */
+}
+
+
+
+.menu-card h2 {
+   margin-bottom :10 px ; 
+   font-size :1.25 rem ; 
+   color :#0056b3 ; 
+}
+
+.menu-card p {
+   margin :0 ; 
+   font-size :1 rem ; 
+   color :rgb(0, 0, 0) ; 
+}
+
+.menu-card p i {
+   margin-right :5 px ; 
+}
+
+	/* Gaya dasar untuk tombol */
+  .menu-card::before  {
+    position: relative; /* Menempatkan elemen relatif terhadap elemen induknya */
+    display: inline-block; /* Menampilkan elemen sebagai blok inline */
+    display: inline-block;
+    padding: 10px; 
+    border: none;
+  }
+
+  .menu-card:hover {
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.10s ease;
+    box-shadow: 0 3px 20px #ff00f7;
+    /*Bluehovershadow*/-webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    -o-transition: all 0.10s ease;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    -webkit-transition: all 0.10s ease;
+    -moz-transition: all 0.10s ease;
+    -ms-transition: all 0.10s ease;
+}
+
+.form-container {
+    flex-grow: 1; /* Memungkinkan main mengambil ruang yang tersisa */
+    display: flex;
+    justify-content: center; /* Centering form horizontally */
+    align-items: center; /* Centering form vertically */
+}

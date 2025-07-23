@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Pengguna</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+    <h1>Daftar Pengguna</h1>
+</header>
+<main>
+	<br/>
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Aksi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="user : ${users}">
+                <td th:text="${user.username}"></td>
+                <td th:text="${user.email}"></td>
+                <td>
+                    <a th:href="@{'/users/form?user=' + ${user.username}}" class="btn btn-warning">Edit</a>
+                    <a th:href="@{'/users/delete/' + ${user.username}}" class="btn btn-danger" style="color: rgb(255, 128, 0); text-decoration: none;"
+                       onclick="return confirm('Apakah Anda yakin ingin menghapus pengguna ini?')">Hapus</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+	<br />
+	<p align="center"><a href="/users/form" class="btn btn-primary">Tambah Pengguna</a></p>
+</main>
+<footer>
+    <p>&copy; 2025 Data Inventory Kitchen - Kelompok Satu - Universitas Insan Pembangunan Indonesia</p>
+</footer>
+</body>
+</html>

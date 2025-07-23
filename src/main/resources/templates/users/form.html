@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pengguna</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background: linear-gradient(135deg, rgb(0, 64, 128), rgb(128, 0, 64)); height: 100vh; display: flex; justify-content: center; align-items: center; color: white;">
+
+<header style="position: absolute; top: 20px; text-align: center; width: 100%;">
+    <h1 style="font-size: 2rem; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);">Form Pengguna</h1>
+</header>
+
+<main style="background: linear-gradient(135deg, rgb(0, 64, 128), rgb(128, 0, 64)); padding: 30px 40px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); width: 90%; max-width: 400px;">
+
+
+    <form action="/users/save" method="post" style="display: flex; flex-direction: column; gap: 20px;">
+
+        <div>
+            <label for="username" style="display: block; font-weight: bold; margin-bottom: 5px;">Username:</label>
+            <input type="text" id="username" name="username" required style="width: 100%; padding: 10px; border: none; border-radius: 5px; background: #ecf0f1; font-size: 1rem;">
+        </div>
+
+        <div>
+            <label for="email" style="display: block; font-weight: bold; margin-bottom: 5px;">Email:</label>
+            <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; border: none; border-radius: 5px; background: #ecf0f1; font-size: 1rem;">
+        </div>
+
+        <div>
+            <label for="password" style="display: block; font-weight: bold; margin-bottom: 5px;">Password:</label>
+            <input type="password" id="password" name="password" required style="width: 100%; padding: 10px; border: none; border-radius: 5px; background: #ecf0f1; font-size: 1rem;">
+        </div>
+
+        <div>
+            <label for="role" style="display: block; font-weight: bold; margin-bottom: 5px;">Role:</label>
+            <input type="text" id="role" name="role" required style="width: 100%; padding: 10px; border: none; border-radius: 5px; background: #ecf0f1; font-size: 1rem;">
+        </div>
+
+        <button type="submit" style="padding: 10px 20px; font-size: 1rem; font-weight: bold; border: none; border-radius: 5px; background: rgb(0, 0, 160); color: white; cursor: pointer; text-transform: uppercase; transition: background 0.3s;">
+            Simpan
+        </button>
+    </form>
+</main>
+
+<footer style="position: absolute; bottom: 20px; text-align: center; width: 100%; font-size: 0.9rem; color: rgba(255, 255, 255, 0.7);">
+    &copy; 2025 Sistem Data Inventory Kitchen - Kelompok Satu - Universitas Insan Pembangunan Indonesia
+</footer>
+
+</body>
+</html>

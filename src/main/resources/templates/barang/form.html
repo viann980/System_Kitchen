@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Barang</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: Arial, sans-serif; background: linear-gradient(135deg, rgb(0, 64, 128), rgb(128, 0, 64)); height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white;">
+
+<header style="text-align: center; margin-bottom: 20px;">
+    <h1 style="font-size: 2rem; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);">Form Barang</h1>
+</header>
+
+<main style="background: linear-gradient(135deg, rgb(0, 64, 128), rgb(128, 0, 64)); padding: 30px 40px; border-radius: 15px; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); width: 90%; max-width: 400px;">
+
+    <form action="/barang/save" method="post" style="display: flex; flex-direction: column; gap: 20px;">
+
+        <div style="display: flex; flex-direction: column;">
+            <label for="kode" style="margin-bottom: 5px; font-weight: bold;">Kode Barang</label>
+            <input type="text" id="kode" name="kode" required style="padding: 10px; border: none; border-radius: 5px; background: #ecf0f1; font-size: 1rem; width: 100%;">
+        </div>
+
+        <div style="display: flex; flex-direction: column;">
+            <label for="nama" style="margin-bottom: 5px; font-weight: bold;">Nama Barang</label>
+            <input type="text" id="nama" name="nama" required style="padding: 10px; border: none; border-radius: 5px; background: #ecf0f1; font-size: 1rem; width: 100%;">
+        </div>
+
+        <div style="display: flex; flex-direction: column;">
+            <label for="harga" style="margin-bottom: 5px; font-weight: bold;">Harga</label>
+            <input type="number" id="harga" name="harga" required style="padding: 10px; border: none; border-radius: 5px; background: #ecf0f1; font-size: 1rem; width: 100%;">
+        </div>
+
+        <div style="display: flex; flex-direction: column;">
+            <label for="stok" style="margin-bottom: 5px; font-weight: bold;">Stok</label>
+            <input type="number" id="stok" name="stok" required style="padding: 10px; border: none; border-radius: 5px; background: #ecf0f1; font-size: 1rem; width: 100%;">
+        </div>
+
+        <button type="submit" style="padding: 10px; font-size: 1rem; font-weight: bold; border: none; border-radius: 5px; background: #2980b9; color: white; cursor: pointer; text-transform: uppercase; transition: background 0.3s;">
+            Simpan
+        </button>
+    </form>
+</main>
+
+<footer style="margin-top: 20px; text-align: center; font-size: 0.9rem; color: rgba(255, 255, 255, 0.7);">
+    &copy; 2025 Data Inventory Kitchen - Kelompok Satu - Universitas Insan Pembangunan Indonesia
+</footer>
+
+</body>
+</html>
